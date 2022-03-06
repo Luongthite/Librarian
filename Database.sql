@@ -3,6 +3,8 @@ create database Librarian
 use Librarian
 
 
+select * from Book
+
 create table Shelf(
 Id nvarchar(100) primary key,
 [Floor] int,  
@@ -29,8 +31,8 @@ Rental_Prince money,
 insert into Book(Title, Publisher, Year, Pic,ShelfId, Quantity, Availability, Category, Rental_Prince)
 values ('Never Eat Alone', 'Nha XB Tre', '2005', null,'A123', 20,20, 'Self-help',5000),
 ('C/C#', 'DH FPT', '2015', null,'B235', 45, 42, 'IT', 5000),
-('Marketing in a NutShell', 'Nha XB Tre','A123', '2002', null, 15,13, 'Marketing',5000),
-('Leadership Skill', 'Nha XB GD&DT', '2007','C234', null, 5, 2, 'Management Skill',5000)
+('Marketing in a NutShell', 'Nha XB Tre','2002',null, 'A123', 15,13, 'Marketing',5000),
+('Leadership Skill', 'Nha XB GD&DT', '2007',null,'C234',  5, 2, 'Management Skill',5000)
 
 create table [Author](
 BookId int foreign key references Book(Id),
@@ -78,7 +80,7 @@ PhoneNumber nvarchar(20),
 insert into Librarian(Id, Password, Name, Address, Email, PhoneNumber)
 values ('Admin1', 'Admin1', 'Nguyen Van A','Cao Bang', 'admin1@gmail.com', '7777777777'),
 ('Admin2', 'Admin2', 'Hoa Hoe','Ha Noi', 'admin2@gmail.com', '8888888888'),
-('Admin3', 'Admin3', 'Nhung','Nghe An', 'admin3@gmail.com', '9999999999'),
+('Admin3', 'Admin3', 'Nhung','Nghe An', 'admin3@gmail.com', '9999999999')
 
 
 
