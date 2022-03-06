@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TEED Admin</title>
+    <!-- Import Boostrap css, js, font awesome here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+      <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+      </script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <link href="CSS/home.css" rel="stylesheet">
+      <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+      <script src="js/index.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+      <div class="logo_content">
+          <div class="logo">
+              <i class='bx bx-library'></i>
+              <div class="logo_name">
+                  TEED LIBRARY
+              </div>
+          </div>
+          <i class='bx bx-menu' id="btn"></i>
+      </div>
+      <ul class="nav_list">
+        <li>
+            <a href="admin.html" >
+                <i class='bx bx-id-card'></i>
+                <span class="links_name">My Profile</span>
+            </a>
+            <span class="tooltip">My Profile</span>
+        </li>
+        <li>
+            <a href="adminBook.html">
+                <i class='bx bxs-book' ></i>
+                <span class="links_name">Book Information</span>
+            </a>
+            <span class="tooltip">Book Information</span>
+        </li>
+        <li>
+            <a href="addBook.html">
+                <i class='bx bxs-book-add' ></i>
+                <span class="links_name">Add Book</span>
+            </a>
+            <span class="tooltip">Add Book</span>
+        </li>
+        <li>
+            <a href="sendMessage.html">
+                <i class='bx bx-chat' ></i>
+                <span class="links_name">Send Message</span>
+            </a>
+            <span class="tooltip">Send Message</span>
+        </li>
+        <li>
+            <a href="manageUser.html">
+                <i class='bx bxs-user-detail' ></i>
+                <span class="links_name">Manage User</span>
+            </a>
+            <span class="tooltip">Manage User</span>
+        </li>
+         <li>
+            <a href="request.html">
+                <i class='bx bx-book-reader' ></i>
+                <span class="links_name">Issue/ Return Request</span>
+            </a>
+            <span class="tooltip">Request</span>
+        </li>
+        <li>
+            <a href="recommendations.html">
+                <i class='bx bx-book-heart' ></i>
+                <span class="links_name">Recommendations</span>
+            </a>
+            <span class="tooltip">Recommendations</span>
+        </li>
+        <li>
+            <a href="currentlyIssued.html">
+                <i class='bx bxs-edit-alt'></i>
+                <span class="links_name">Currently Issued Books</span>
+            </a>
+            <span class="tooltip">Currently Issued</span>
+        </li>
+    </ul>
+      <div class="profile_content">
+          <div class="profile">
+              <div class="profile_details">
+                  <img src="PHOTOS/reading1.jpg" alt="">
+                  <div class="name_job">
+                      <div class="name">
+                          Admin 1
+                      </div>
+                      <div class="job">Administrator</div>
+                  </div>
+              </div>
+              <i class='bx bx-log-out' id="log_out" ></i>
+          </div>
+      </div>
+  </div>
+
+<div class="home_content">
+     <div id="main">
+      <div class="headerhome row" >
+    <h2 style="padding-left: 10%; display: flexbox; float: right;" >MY PROFILE</h2>
+   </div>
+    <hr class="my-4">
+  
+  
+      <!-- My Profile -->
+      <div class="container-fluid d-flex justify-content-center myprofile">
+          <div class="col-xs-12 col-sm-6 col-md-5" style="box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);" >
+              <div class="text-center" style="padding: 5%;"> <img src="PHOTOS/reading1.jpg" width="200" height="200" class="rounded-circle" ">
+                  <h3 class="mt-2">Admin1</h3> <span class="mt-1 clearfix">Librarian</span>
+                 
+                  <hr class="line"> <small class="mt-4">I am a Librarian at TEED Library. I love reading books</small>
+      
+              </div>
+          </div>
+          <div class=" col-xs-12 col-sm-6 col-md-7" style="margin-top: 20px;"> 
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Full Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      Kenneth Valdez
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      fip@jukmuh.al
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Phone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      (239) 816-9029
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Mobile</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      (320) 380-4539
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Address</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      Bay Area, San Francisco, CA
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <a style="color: white;" class="btn btn-block " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
+                    </div>
+                  </div>
+                </div>
+             
+      </div>
+  
+  
+  
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+  let btn=document.querySelector("#btn");
+  let sidebar=document.querySelector(".sidebar");
+
+  btn.onclick=function(){
+      sidebar.classList.toggle("active");
+  }
+
+  
+  
+</script>
+
+</body>
+</html>
