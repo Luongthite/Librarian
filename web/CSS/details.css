@@ -431,10 +431,6 @@ ol {
 	display: inline-block;
 }
 
-.inner-header .logo a img{
-    width: 140px;
-}
-
 .inner-header .advanced-search {
 	height: 50px;
 	border: 1px solid #ebebeb;
@@ -2135,19 +2131,10 @@ ol {
 	margin-bottom: 10px;
 	position: relative;
 	z-index: 1;
-            align-items: center;
-      justify-content: center;
-    overflow: hidden
 }
 
 .product-pic-zoom img {
-
-        object-fit: contain;
-        display: inline-block;
-            flex-shrink: 0;
-    width: 500px;
-    height: 500px;
-
+	min-width: 100%;
 }
 
 .product-pic-zoom .zoom-icon {
