@@ -205,7 +205,7 @@
                                                 </a>
                                                 <div class="product-price">
                                                     Free
-                                                    <span>$35.00</span>
+                                                    <span>$3.00</span>
                                                 </div>
                                             </div>
                                         </div>

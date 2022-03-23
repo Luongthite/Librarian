@@ -135,8 +135,8 @@
                             <li><a href="#">Home</a></li>
                             <li><a href="BookControl">Book List</a></li>
                              <c:if test="${sessionScope.acc!=null}">
-<!--                         <li><a href="./blog.html">Manage My Book Mark List</a></li>
-                         <li><a href="./contact.html">Recommend a Book</a></li>-->
+                         <li><a href="userIssued">Manage My Account</a></li>
+                         <li><a href="memRecLoad">Recommend a Book</a></li>
                          </c:if>
                             
                             

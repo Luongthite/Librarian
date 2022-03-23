@@ -90,15 +90,17 @@
                             <th>ID</th>
                             <th>Title</th>
                             <th>Publisher</th>
-                            <th>Year</th>
+<!--                            <th>Year</th>-->
                             <th>ShelfId</th>
                             <th>Quantity</th>
                             <th>Availability</th>
                             <th>CategoryId</th>
-                            <th>Language</th>
-                            <th>Time Post</th>
+<!--                            <th>Language</th>-->
+<!--                            <th>Time Post</th>-->
                             <th>Rental Price</th>
-                            <th>Short Description</th>
+<!--                            <th>Short Description</th>-->
+                            <th></th>
+                            
                             
                         </tr>
                     </thead>
@@ -114,21 +116,21 @@
                             <td>${l.id}</td>
                             <td>${l.title}</td>
                             <td>${l.publisher}</td>
-                            <td>${l.year}</td>
+<!--                            <td>$l.year}</td>-->
                             <td>${l.shelfId}</td>
                             <td>${l.quantity}</td>
                             <td>${l.avail}</td>
                             <td>${l.category}</td>
-                            <td>${l.language}</td>
-                            <td>${l.timePost}</td>
+<!--                            <td>$l.language}</td>-->
+<!--                            <td>$l.timePost}</td>-->
                             <td>${l.rental_price}</td>
-                            <td>${l.getShortDesShort()}
-                                </td>
+<!--                            <td>$l.getShortDesShort()}
+                                </td>-->
                             
                             
                             <td>
-                                <a href="loadBook?bookId=${l.id}" class="edit"><i class="fa fa-plus" aria-hidden="true" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                <a href="delete?bookId=${l.id}" class="delete" ><i class="fa fa-trash" aria-hidden="true" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                <a href="loadBook?bookId=${l.id}" class="edit"><i class="fa fa-pencil-square-o" aria-hidden="true" data-toggle="tooltip" title="Edit">&#xf044;</i></a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="delete?bookId=${l.id}" class="delete" ><i class="fa fa-trash" aria-hidden="true" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                             </td>
                         </tr>
                      </c:forEach>  
@@ -136,7 +138,7 @@
                 </table>
                 <div class="clearfix">
                     <form action="aBookControl">
-                    <div class="hint-text">Showing <input name="pageSize" value="${pageSize}"> out of <b>25</b> entries</div>
+                    <div class="hint-text">Showing <input name="pageSize" value="${pageSize}"> out of <b>${countBook}</b> entries</div>
                     <input type="submit" value="Go">
                     </form>
                     <ul class="pagination">

@@ -39,38 +39,74 @@
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <!--						<th>
-                                                                                    <span class="custom-checkbox">
-                                                                                            <input type="checkbox" id="selectAll">
-                                                                                            <label for="selectAll"></label>
-                                                                                    </span>
-                                                                            </th>-->
+                          
                             <th>Member ID</th>
                             <th>Book ID</th>
                             <th>Admin ID</th>
                             <th>Date Of Issue</th>
-<!--                            <th></th>
-                            -->
+                            <th>Date Of Return</th>
+                            <th>Actual Return Date</th>
+                            <th>Fine</th>
+                            <th></th>
+                            
                             
                         </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${listPage}" var="l">
+                    <c:forEach items="${listPage}" var="li">
                         <tr>
-<!--                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                    <label for="checkbox1"></label>
-                                </span>
-                            </td>-->
-                            <td>${l.memberId}</td>
-                            <td>${l.bookId}</td>
-                            <td>${l.adminId}</td>
-                            <td>${l.dateOfIssue}</td>
+                            <td>${li.getMemberId()}</td>
+                            <td>${li.bookId}</td>
+                            <td>${li.adminId}</td>
+                            <td>${li.dateOfIssue}</td>
+                            <td>${li.dateOfReturn}</td>
+                            <td>${li.actualReturnDate}</td>
+                            <td>${li.fine}</td>
+                            <td><c:if test="${li.actualReturnDate==null}"><a href="return?bookId=${li.bookId}&memberId=${li.memberId}&dateOfIssued=${li.dateOfIssue}">Return</a></c:if>
+                            <c:if test="${li.actualReturnDate!=null}"><a href="rollBack?bookId=${li.bookId}&memberId=${li.memberId}&dateOfIssued=${li.dateOfIssue}">Roll Back</a>
+                           </c:if>
+                            </td>
+                            <td><a href="editReturn?bookId=${li.bookId}&memberId=${li.memberId}&dateOfIssued=${li.dateOfIssue}&adminId=${li.adminId}&dateOfReturn=${li.dateOfReturn}&actualReturnDate=${li.actualReturnDate}&fine=${li.fine}
+                                   " >Edit</a></td>
+                            
+                                    <div id="addEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="editReturn">
+                        
+                        <div class="modal-header">						
+                            <h4 class="modal-title">Edit Return Date</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Member ID</label>
+                                <input type="text" class="form-control" name="memberId" value="${li.getMemberId()}">
+                            </div>
+                            <div class="form-group">
+                                <label>Actual Return Date</label>
+                                <input type="date" class="form-control" name="returnDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Actual Return Date</label>
+                                <input type="date" class="form-control" name="returnDate" required>
+                            </div>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-success" value="Add">
+                        </div>
+                    </form>
+                </div>
+            </div>
+                            
+        </div>
+                            
                             
 <!--                            <td>
-                                <a href="loadBook?bookId=${l.id}" class="edit"><i class="fa fa-plus" aria-hidden="true" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                <a href="delete?bookId=${l.id}" class="delete" ><i class="fa fa-trash" aria-hidden="true" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                <a href="loadBook?bookId=$l.id}" class="edit"><i class="fa fa-plus" aria-hidden="true" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                <a href="delete?bookId=$l.id}" class="delete" ><i class="fa fa-trash" aria-hidden="true" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                             </td>-->
                         </tr>
                      </c:forEach>  
