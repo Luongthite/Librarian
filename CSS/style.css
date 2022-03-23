@@ -1,0 +1,116 @@
+
+.navbar{
+    background-color: rgb(139, 1, 1) !important;
+  
+}
+
+.navbar form{
+    text-align: center;
+    padding-left: 30%;
+}
+
+.navbar .menu li a {
+    color: white !important;
+    font-style: italic;
+}
+
+
+.navbar li a:hover {
+    color: rgb(68, 0, 0) !important;
+   
+}
+
+.navbar form input{
+    /* border-radius: 20%; */
+   border: none; 
+}
+
+.carousel-caption {
+	position: absolute;
+	top: 20%;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 15px rgb(0, 0, 0);
+   
+}
+
+.carousel-caption h1{
+	color: rgb(255, 255, 255);
+    font-weight: 400;
+}
+
+
+.btn-primary{
+    background-color: rgb(139, 1, 1);
+    border-color: rgb(255, 255, 255);
+}
+
+.btn-primary:hover{
+    background-color: rgb(68, 0, 0);
+    border-color: rgb(255, 255, 255);
+}
+
+.carousel-item img{
+    width: 100%;
+}
+
+.jumbotron{
+    padding: 10px;
+    background-color: rgb(221, 221, 221);
+    text-align: center;
+}
+
+.jumbotron button{
+    background-color: rgb(139, 1, 1);
+    color: white;
+    border-color: white;
+}
+
+.mostborrow img{
+width: 100%;
+}
+
+.login_signup{
+overflow: hidden;
+position: relative;
+}
+
+.login_signup .bg{
+    position: absolute;
+    opacity: 0.6;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.login_signup .content{
+    position: relative;
+}
+
+footer{
+    background-color: rgb(139, 1, 1);
+    color: white;
+}
+footer img{
+    width: 50px;
+}
+
+
+ 
+
+
+
+.num {
+    color: #eee !important
+}
+
+.line {
+    color: #fff
+}
+
+
+
+  
+  .myprofile{
+      background-image: url('https://images.squarespace-cdn.com/content/v1/6099b5f328fc4e72bd8418e6/1623067942217-P90E3H59FZ0B9AC28QAK/openair5web.jpg');
+
+  }
