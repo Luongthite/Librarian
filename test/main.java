@@ -3,11 +3,13 @@ import DAL.BookDAO;
 import DAL.CategoryDAO;
 import DAL.IssuedDAO;
 import DAL.MemberDAO;
+import DAL.RecDAO;
 import DAL.RequestDAO;
 import Model.Book;
 import Model.Category;
 import Model.Issued;
 import Model.Member;
+import Model.Recommendation;
 import Model.Request;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -66,12 +68,26 @@ RequestDAO rdao=new RequestDAO();
 //            System.out.println(req);
 //        }
 
+//BookDAO dao=new BookDAO();
+//        System.out.println(dao.takeAvail("1"));
+//        dao.updateBookAvail(1, dao.takeAvail("1")-1);
+//           System.out.println(dao.takeAvail("1"));
+////
+//RecDAO idao=new RecDAO();
+//
+//
+//
+////idao.addRec("HE163541", "eeeee", "eeeeee", "eeee", "eeeee");
+//ArrayList<Recommendation> reqs=idao.getAll();
+//        for (Recommendation req : reqs) {
+//            System.out.println(req);
+//        }
+//        
+
 IssuedDAO idao=new IssuedDAO();
-ArrayList<Issued> reqs=idao.getAll();
-        for (Issued req : reqs) {
-            System.out.println(req);
-        }
-        
-        
+idao.editIssued("AI178902", 1, "Admin1", java.util.sql(new Date()), java.util.sql(new Date()), java.util.sql(new Date()), 7);
+
+//        IssuedDAO idao=new IssuedDAO();
+//        idao.return1("AI178902", 1, 2022-03-22, 2022-04-05);
 }
 }
