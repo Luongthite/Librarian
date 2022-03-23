@@ -1,0 +1,14 @@
+SMAP
+myRec_jsp.java
+JSP
+*S JSP
+*F
++ 0 myRec.jsp
+myRec.jsp
+*L
+1,42:54
+43:96,3
+44,77:99
+121:176,3
+122,16:179
+*E

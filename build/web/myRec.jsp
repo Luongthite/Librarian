@@ -1,4 +1,4 @@
-ArrayList<Issued><%@page import="Model.Issued"%>
+<%@page import="Model.Issued"%>
 <%@page import="Model.Book"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="DAL.BookDAO"%>
@@ -61,78 +61,85 @@ ArrayList<Issued><%@page import="Model.Issued"%>
     <!-- Shopping Cart Section Begin -->
     <section class="shopping-cart spad">
         <div class="container">
-            <h3>MY CURRENTLY BORROWED BOOK</h3>
+            <c:if test="${rList!=null}">
+             <h3>My Recommendation List</h3>
+            <BR>
+            <BR>
+            
+            <div class="row">
+                <div class="col-lg-12">
+                
+                    <div class="cart-table">
+                        <form action="memRec" method="get">
+                            <table>
+                            <thead>
+                                <tr>
+                                    <th >Book Name</th>
+                                    <th class="p-name">Description</th>
+                                    <th>Author</th>
+                                    <th>Book Pic URL</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <c:forEach items="${rList}" var="r">
+                            <tr>
+                                <td class="p-name">
+                                    ${r.bookName}
+                                </td>
+                                <td class="p-name">
+                                    ${r.des}
+                                </td>
+                                <td>
+                                    ${r.author}
+                                </td>
+                                <td class="p-name">
+                                    ${r.bookPic}
+                                </td>
+                                <td>
+                                    ${r.status}
+                                </td>
+                                
+                            </tr>
+                            </tbody>
+                        </c:forEach>
+                            </table>
+                            </form>
+                    </div>      
+                    
+                </div>
+            </div
+            </c:if>
+            <BR>
+            <h3>Recommend a Book</h3>
             <BR>
             <BR>
             <div class="row">
                 <div class="col-lg-12">
-                    
                     <div class="cart-table">
+                        <form action="memRec" method="post">
                         <table>
-                            <thead>
-                                <tr>
-                                    <th>Book ID</th>
-                                    <th >Book Title</th>
-                                    <th>Date Of Issue</th>
-                                    <th>Date Of Return</th>
-                                    <th>Actual Return Date</th>
-                                    <th>Fine</th>
-
-<!--                                    <th></th>
-                                    <th>Actual Return Date</th>
-                                    <th>Actual Return Date</th>-->
-                                    
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <c:forEach items="${mList}" var="m">
-                                <tr>
-                                    <td>${m.getBookId()}</td>
-                                    <td><b:getBookById boodId="${m.getBookId()}"></b:getBookById>
-                                    </td>
-                                    <td class="p-price first-row">${m.getDateOfIssue()}</td>
-                                    <td class="p-price first-row">${m.getDateOfReturn()}</td>
-                                    <td class="p-price first-row">${m.getActualReturnDate()}</td>
-                                    <td class="p-price first-row">${m.getFine()}</td>
-<!--                                    <td class="qua-col first-row">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="total-price first-row">$60.00</td>
-                                    <td class="close-td first-row"><i class="ti-close"></i></td>-->
-                                </tr>
-                                </c:forEach>
-                               
-                            </tbody>
+                            <tr><TD>Book Name:</TD>
+                                <TD><input type="text" name="bookName"></TD>
+                            </tr>
+                            <tr><TD>Book Pic URL:</TD>
+                                <TD><input type="text" name="bookPic"></TD>
+                            </tr>
+                            <tr><TD >Book Author:</TD>
+                                <TD><input type="text" name="author"></TD>
+                            </tr>
+                            <tr>
+                                <td>Description:</td>
+                                <td><input type="text" name="des"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="submit" name="" value="SEND RECOMMENDATION"></td>
+                            </tr>
+                            
                         </table>
-                    </div>
-<!--                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="cart-buttons">
-                                <a href="#" class="primary-btn continue-shop">Continue shopping</a>
-                                <a href="#" class="primary-btn up-cart">Update cart</a>
-                            </div>
-                            <div class="discount-coupon">
-                                <h6>Discount Codes</h6>
-                                <form action="#" class="coupon-form">
-                                    <input type="text" placeholder="Enter your codes">
-                                    <button type="submit" class="site-btn coupon-btn">Apply</button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 offset-lg-4">
-                            <div class="proceed-checkout">
-                                <ul>
-                                    <li class="subtotal">Subtotal <span>$240.00</span></li>
-                                    <li class="cart-total">Total <span>$240.00</span></li>
-                                </ul>
-                                <a href="#" class="proceed-btn">PROCEED TO CHECK OUT</a>
-                            </div>
-                        </div>
-                    </div>-->
+                            </form>
+                    </div>                   
                 </div>
             </div>
         </div>

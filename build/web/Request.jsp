@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-
+<jsp:useBean id="av" class="DAL.BookDAO"></jsp:useBean>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -39,9 +39,11 @@
                             <!--                                                                </th>-->
                             <th>Member ID</th>
                             <th>Book ID</th>
+                            <th>Book Name</th>
                             <th>Type</th>
                             <th>Status</th>
-                          
+                            <th>Availability</th>
+                            <th></th>
                             
                         </tr>
                     </thead>
@@ -56,14 +58,16 @@
                             </td>-->
                             <td>${l.memberId}</td>
                             <td>${l.bookId}</td>
+                            <td>${av.takeBookName(l.bookId)}</td>
                             <td>${l.type}</td>
                             <td>${l.status}</td>
+                            <td>${av.takeAvail(l.bookId)}</td>
                             
                             
                             <td>
                                
-                                <a href="AcceptRequest?bookId=${l.bookId}&memberId=${l.memberId}" class="edit"><i class="fa fa-check" aria-hidden="true" data-toggle="tooltip" title="Accept"></i></a>
-                                <a href="DenyRequest?bookId=${l.bookId}&memberId=${l.memberId}" class="delete" ><i class="fa fa-trash" aria-hidden="true" data-toggle="tooltip" title="Deny">&#xE872;</i></a>
+                                <a href="AcceptRequest?bookId=${l.bookId}&memberId=${l.memberId}" class="edit"><i class="fa fa-user-plus" aria-hidden="true" data-toggle="tooltip" title="Accept"></i></a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DenyRequest?bookId=${l.bookId}&memberId=${l.memberId}" class="delete" ><i class="fa fa-user-times" data-toggle="tooltip" title="Deny"></i></a>
                             </td>
                         </tr>
                      </c:forEach>  

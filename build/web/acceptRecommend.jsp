@@ -1,5 +1,5 @@
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="pager" uri="/WEB-INF/tlds/pageTag" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,82 +19,63 @@
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
         <script src="js/index.js"></script>
     </head>
-    <body><!-- Edit Modal HTML -->
-        <div style="overflow: scroll; height : 90%; max-height:750px">
-            <div class="modal-dialog">
+    <body>
+        <div class="modal-dialog">
                 <div class="modal-content">
-                    <form action="updateBook">
+                    <form action="add">
                         <div class="modal-header">						
-                            <h4 class="modal-title">Edit Book</h4>
+                            <h4 class="modal-title">Add Book</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <div class="form-group">
-                                <label>ID</label>
-                                <input type="text" class="form-control" name="bookId" required value="${thisB.id}" readonly>
-                            </div>
+                            
                             <div class="form-group">
                                 <label>Title</label>
-                                <input type="text" class="form-control" name="title" required value="${thisB.title}">
+                                <input type="text" class="form-control" name="title" required>
                             </div>
                             <div class="form-group">
                                 <label>Publisher</label>
-                                <input type="text" class="form-control" name="publisher" required value="${thisB.publisher}">
+                                <input type="text" class="form-control" name="publisher" required>
                             </div>
                             <div class="form-group">
                                 <label>Year</label>
-                               <input type="number" class="form-control" name="year" required value="${thisB.year}"> 
+                               <input type="number" class="form-control" name="year" required>
                             </div>
                              <div class="form-group">
                                 <label>Photos URL</label>
-                                <input type="text" class="form-control" name="pic" required value="${thisB.pic}">
+                                <input type="text" class="form-control" name="pic" required>
                             </div>
                             <div class="form-group">
                                 <label>ShelfId</label>
-                                <input type="text" class="form-control" name="shelfId" required value="${thisB.shelfId}">
+                                <input type="text" class="form-control" name="shelfId" required>
                             </div>
                             <div class="form-group">
                                 <label>Quantity</label>
-                                <input type="number" class="form-control" name="quantity" required value="${thisB.quantity}">
+                                <input type="number" class="form-control" name="quantity" required>
                             </div>
                             <div class="form-group">
-                                <label>Availability</label>
-                                <input type="number" class="form-control" name="avail" required value="${thisB.avail}">
-                            </div>
-                            <div class="form-group">
-                               <label>Category</label>
-                                <input type="text" class="form-control" name="category" required value="${thisB.category}">
+                                <label>Category</label>
+                                <input type="text" class="form-control" name="category" required>
                             </div>
                             <div class="form-group">
                                 <label>Language</label>
-                                <input type="text" class="form-control" name="language" required value="${thisB.language}">
+                                <input type="text" class="form-control" name="language" required>
                             </div>
                             <div class="form-group">
                                 <label>Rental Price</label>
-                                <input type="number" class="form-control" name="price" required value="${thisB.rental_price}">
+                                <input type="number" class="form-control" name="price" required>
                             </div>
                              <div class="form-group">
                                 <label>Short Description</label>
-                                <textarea class="form-control" name="shortDes" required>${thisB.shortDes}</textarea>
+                                <textarea class="form-control" name="shortDes" required></textarea>
                             </div>
                         </div>
                         <div class="modal-footer">
-                           
-                            <input type="submit" class="btn btn-info" value="Save">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-success" value="Add">
                         </div>
                     </form>
                 </div>
             </div>
-        </div>
-     
-
-        <script>
-            let btn = document.querySelector("#btn");
-            let sidebar = document.querySelector(".sidebar");
-
-            btn.onclick = function () {
-                sidebar.classList.toggle("active");
-            }
-        </script>
-
     </body>
 </html>

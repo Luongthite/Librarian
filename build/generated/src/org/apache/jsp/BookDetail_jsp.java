@@ -357,7 +357,8 @@ public final class BookDetail_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        </div>\n");
       out.write("                    </div>\n");
       out.write("                <div class=\"col-lg-9\">\n");
-      out.write("                    <div class=\"row\">\n");
+      out.write("                    \n");
+      out.write("<!--                    yfky-->\n");
       out.write("                        <div class=\"col-lg-6\">\n");
       out.write("                            <div class=\"product-pic-zoom\">\n");
       out.write("                                <img class=\"product-big-img\" src=\"img/product-single/product-1.jpg\" alt=\"\">\n");

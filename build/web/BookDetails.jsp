@@ -189,7 +189,7 @@
                                 </div>-->
                                 <div class="pd-desc">
                                     <p>${thisB.getShortDes()}</p>
-                                    <h4>$495.00 <span>629.99</span></h4>
+                                    <h4>Free <span>$3.00</span></h4>
                                 </div>
 <!--                                <div class="pd-color">
                                     <h6>Color</h6>
@@ -230,7 +230,7 @@
                                     <div class="pro-qty">
                                         <input type="text" value="1">
                                     </div>
-                                    <a href="#" class="primary-btn pd-cart">Request Issue</a>
+                                    <a href="#" onclick="ShowMess(${o.getId()})" class="primary-btn pd-cart">Request Issue</a>
                                 </div>
                                 <ul class="pd-tags">
                                     <li><span>CATEGORIES</span>: ${thisB.getCategory()} - <cateName:cateName cateId="${thisB.getCategory()}"></cateName:cateName></li>
@@ -303,13 +303,13 @@
                                             <tr>
                                                 <td class="p-catagory">Rental Price</td>
                                                 <td>
-                                                    <div class="p-price">$3.00</div>
+                                                    <div class="p-price">Free</div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="p-catagory">Request An Issue</td>
                                                 <td>
-                                                    <div class="cart-add">+ Request</div>
+                                                    <div class="cart-add"><a href="#" onclick="ShowMess(${o.getId()})">+ Request</a></div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -354,7 +354,7 @@
                                         </table>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="tab-3" role="tabpanel">
+<!--                                <div class="tab-pane fade" id="tab-3" role="tabpanel">
                                     <div class="customer-review-option">
                                         <h4>2 Comments</h4>
                                         <div class="comment-option">
@@ -419,7 +419,7 @@
                                             </form>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -491,6 +491,17 @@
         <script src="JS/jquery.slicknav.js"></script>
         <script src="JS/owl.carousel.min.js"></script>
         <script src="JS/main.js"></script>
+        
+        <script>
+            function ShowMess(id) {
+     var option=confirm("Do you want to request an issue of this book ?");
+           if(option===true){
+                           window.location.href="request?bookId="+id;
+      
+           }
+
+}
+        </script>
     </body>
 
 </html>

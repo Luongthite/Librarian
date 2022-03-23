@@ -170,11 +170,14 @@ public final class adminBook_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    </tbody>\r\n");
       out.write("                </table>\r\n");
       out.write("                <div class=\"clearfix\">\r\n");
-      out.write("                    <div class=\"hint-text\">Showing <input name=\"");
+      out.write("                    <form action=\"aBookControl\">\r\n");
+      out.write("                    <div class=\"hint-text\">Showing <input name=\"pageSize\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageSize}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\" value=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageSize}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\"> out of <b>25</b> entries</div>\r\n");
+      out.write("\"> out of <b>");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${countBook}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</b> entries</div>\r\n");
+      out.write("                    <input type=\"submit\" value=\"Go\">\r\n");
+      out.write("                    </form>\r\n");
       out.write("                    <ul class=\"pagination\">\r\n");
       out.write("                        ");
       if (_jspx_meth_pager_PagerAdmin_0(_jspx_page_context))

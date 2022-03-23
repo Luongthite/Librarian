@@ -54,17 +54,17 @@
          <li>
             <a href="areq">
                 <i class='bx bx-book-reader' ></i>
-                <span class="links_name">Issue/ Return Request</span>
+                <span class="links_name">Issue Request</span>
             </a>
             <span class="tooltip">Request</span>
         </li>
-<!--        <li>
-            <a href="recommendations.jsp">
+        <li>
+            <a href="arec">
                 <i class='bx bx-book-heart' ></i>
                 <span class="links_name">Recommendations</span>
             </a>
             <span class="tooltip">Recommendations</span>
-        </li>-->
+        </li>
         <li>
             <a href="CurrentlyIssued">
                 <i class='bx bxs-edit-alt'></i>
@@ -89,3 +89,12 @@
           </div>
       </div>
   </div>
+ 
+     <script>
+            let btn = document.querySelector("#btn");
+            let sidebar = document.querySelector(".sidebar");
+
+            btn.onclick = function () {
+                sidebar.classList.toggle("active");
+            };
+        </script>
