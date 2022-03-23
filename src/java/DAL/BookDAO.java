@@ -518,5 +518,37 @@ public class BookDAO extends BaseDAO1<Book>{
         
        } 
      }
+       
+       public int takeAvail(String id){
+            try {
+           String sql ="select Availability from Book where Id=?";
+             PreparedStatement statement = connection.prepareStatement(sql);
+             statement.setString(1, id);
+           ResultSet rs = statement.executeQuery();
+           if(rs.next())
+           {
+              return rs.getInt(1);
+           }
+       } catch (SQLException ex) {
+        
+       }
+       return -1;
+       }
+       
+       public String takeBookName(String id){
+            try {
+           String sql ="select Title from Book where Id=?";
+             PreparedStatement statement = connection.prepareStatement(sql);
+             statement.setString(1, id);
+           ResultSet rs = statement.executeQuery();
+           if(rs.next())
+           {
+              return rs.getString(1);
+           }
+       } catch (SQLException ex) {
+        
+       }
+       return "invalid ID";
+       }
      
 }

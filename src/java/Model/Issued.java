@@ -19,6 +19,8 @@ public class Issued {
     private Date dateOfReturn;
     private Date actualReturnDate;
     private long fine;
+    private boolean empty;
+   
 
     public Issued(String memberId, int bookId, String adminId, Date dateOfIssue, Date dateOfReturn, Date actualReturnDate, long fine) {
         this.memberId = memberId;
@@ -35,6 +37,12 @@ public class Issued {
 
     public String getMemberId() {
         return memberId;
+    }
+    
+     public boolean isEmpty(){
+        if(dateOfReturn==null)
+            return true;
+        return false;
     }
 
     public void setMemberId(String memberId) {
